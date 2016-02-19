@@ -1,0 +1,45 @@
+// IOT Data Models
+
+{
+"bn":"/sen/temp/1/",
+"e":[
+{"n":"currentValue","v":"31.3","u":"C"},
+{"n":"maxValue","v":"37.1","u":"C"},
+{"n":"minValue","v":"18.3","u":"C"},
+{"n":"resetMaxMin"},
+{"n":"minScale","v":"0","u":"C"},
+{"n":"maxScale","v":"100","u":"C"},
+{"n":"appType","sv":"Inboard Bearing"}
+],
+"l":[
+{"href":"","rel":"self","rt":"temperature","u":"C"},
+{"href":"currentValue","rt":"currentValue","u":"C"},
+{"href":"maxValue","rt":"maxValue","u":"C"},
+{"href":"minValue","rt":"minValue","u":"C"},
+{"href":"resetMaxMin","rt":"resetMaxMin"},
+{"href":"minScale","rt":"minScale","u":"C"},
+{"href":"maxScale","rt":"maxScale","u":"C"},
+{"href":"appType","rt":"appType"}
+]
+}
+
+mosquitto - would push to this
+
+{ 
+sensorid : ( uuid : qq4qwqwrqewrewqr),
+sensorloc : { geo: long, lat, loctag: tag},
+timestamp :  ts,
+temp,
+apptype,
+}
+
+csv.  
+
+[ .. druid.. ]
+
+..  intel 
+
+.. visualize
+
+
+
