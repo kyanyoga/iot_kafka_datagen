@@ -23,6 +23,14 @@
 ]
 }
 
+// AWS datagram
+{
+    "code": error-code,
+    "message": "error-message",
+    "timestamp": timestamp,
+    "clientToken": "token"
+}
+
 mosquitto - would push to this
 
 { 
