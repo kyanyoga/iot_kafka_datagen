@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """
 Created on Sun Feb 21 14:45:34 2016
-
 @author: Gus Segura
 """
 
@@ -14,7 +13,7 @@ import sys
 import math
 import json
 from collections import OrderedDict
-from kafka import SimpleProducer, KafkaClient
+# from kafka import SimpleProducer, KafkaClient
 
 # kafka server info
 # kafka = KafkaClient("localhost")
@@ -43,7 +42,7 @@ baseLevel = 10
 jmsg = {}
       
 # create dictionary
-def create_jmsg(timestamp, timezone, millis, senstype, metric):
+def create_jmsg(timestamp, timezone, millis, sensor, senstype, metric):
     msg = OrderedDict()         # ordered dictionary
     if(timestamp != ""):
         msg["timestamp"] = timestamp
@@ -51,6 +50,8 @@ def create_jmsg(timestamp, timezone, millis, senstype, metric):
         msg["timezone"] = timezone
     if(millis != ""):
         msg["millis"] = millis
+    if(sensor != ""):
+        msg["sensor"] = sensor
     if(senstype != ""):
         msg["senstype"] = senstype
     if(metric != ""):
@@ -71,7 +72,7 @@ while (True):
     # outputfile = open(outputpath, 'a+')
     
     # sensor name
-    #create random values
+    #create random values - well match sensor id to type for now.
     sensor = random.sample(['sen/1', 'sen/2', 'sen/3', 'send/4'], 1)[0]
     
     # metric type
@@ -84,21 +85,21 @@ while (True):
         if baseTemp <= 0:
             baseTemp = 32.0  # reset if sin function takes you negative
         # create message dictionary    
-        jmsg = create_jmsg(t,timezone,millis, metric, baseTemp)
+        jmsg = create_jmsg(t,timezone,millis, "sen/1", metric, baseTemp)
     
     if metric == 'currentPresure':
         basePresure = basePresure + sin_value*10
         if basePresure <= 0:
             basePresure = 1000 # reset if sin function takes you negative
         # create message dictionary    
-        jmsg = create_jmsg(t,timezone,millis, metric, basePresure)
+        jmsg = create_jmsg(t,timezone,millis, "sen/2", metric, basePresure)
     
     if metric == 'currentLevel':
         baseLevel =  baseLevel + sin_value*.10
         if baseLevel <= 0:
             baseLevel = 10 
         # create message dictionary    
-        jmsg = create_jmsg(t,timezone,millis, metric, baseLevel)
+        jmsg = create_jmsg(t,timezone,millis, "sen/3", metric, baseLevel)
         
     # TODO: Push to Kafka
     # producer.send_messages(topic, str.encode(str(t))) 
