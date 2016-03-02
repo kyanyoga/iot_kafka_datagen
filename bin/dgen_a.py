@@ -17,7 +17,7 @@ from collections import OrderedDict
 from kafka import SimpleProducer, KafkaClient
 
 # kafka server info
-# kafka = KafkaClient("172.17.136.43")
+# kafka = KafkaClient("localhost")
 
 # producer = SimpleProducer(kafka) 
 # topic = b'test' 
