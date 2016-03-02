@@ -101,6 +101,7 @@ while (True):
         jmsg = create_jmsg(t,timezone,millis, metric, baseLevel)
         
     # TODO: Push to Kafka
+    # producer.send_messages(topic, str.encode(str(t))) 
         
     # sleep to slow down generation
     time.sleep( .7750 / 1000.0 )
