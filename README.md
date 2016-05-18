@@ -4,4 +4,5 @@
 ** Using a sin wave function will vary temperature, bp and activity over time **
 
 ** added a redis output file so we can pick out desitination **
-*Just Started: Feb 2016 - Check Back*
+** added specific generator for person data **
+** added specific generator for machine data **
