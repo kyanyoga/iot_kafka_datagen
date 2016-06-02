@@ -17,6 +17,8 @@
 #### You will also need to configure AWS CLI with your keys and default region.
 #### http://docs.aws.amazon.com/general/latest/gr/rande.html
 
-2) run the table build script: user$ python sensor_ddb.py
+2) run the ddb table build script: user$ python sensor_ddb.py  [ This will build the IOT Sensor Table ].
 
-3) run the desired generator: user$ python dgen_person_ddb.py  -or- user$ python dgen_mach_ddb.py
+3) run the desired generator: 
+a) user$ python dgen_person_ddb.py  [ generate person data to ddb ] - or -
+b) user$ python dgen_mach_ddb.py    [ generate machine data to ddb ]
