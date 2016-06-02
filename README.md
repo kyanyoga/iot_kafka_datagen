@@ -9,9 +9,9 @@
 
 ** added specific generator for machine data **
 
-## Latest: May 2016 ##  
-## Note: You will need to install AWS Cli, Boto3 (for Python) and Most likely DynamoDB locally to Test.
-## Added new DynamoDB Data Generator ##
+## Latest: May 2016  
+### Note: You will need to install AWS Cli, Boto3 (for Python) and Most likely DynamoDB locally to Test.
+### Added new DynamoDB Data Generator
 1) download and install DynamoDB local or change end point in scripts : sensor_ddb.py, dgen_person_ddb.py, dgen_mach_ddb.py
 
 2) run the table build script: user$ python sensor_ddb.py
