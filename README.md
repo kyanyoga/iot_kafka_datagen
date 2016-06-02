@@ -12,9 +12,9 @@
 ## Latest: May 2016  
 ### Note: You will need to install AWS Cli, Boto3 (for Python) and Most likely DynamoDB locally to Test.
 ### Added new DynamoDB Data Generator
-1) download and install DynamoDB local or change end point in scripts.
-(sensor_ddb.py, dgen_person_ddb.py, dgen_mach_ddb.py) to your DynamoDB end-point.
-You will also need to configure AWS CLI with you keys and default region.
+1) download and install DynamoDB local (easy) -or- change end point in scripts.
+#### (sensor_ddb.py, dgen_person_ddb.py, dgen_mach_ddb.py) to your DynamoDB end-point.
+#### You will also need to configure AWS CLI with you keys and default region.
 #### http://docs.aws.amazon.com/general/latest/gr/rande.html
 
 2) run the table build script: user$ python sensor_ddb.py
