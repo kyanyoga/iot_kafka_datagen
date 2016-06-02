@@ -20,5 +20,5 @@
 2) run the ddb table build script: user$ python sensor_ddb.py  [ This will build the IOT Sensor Table ].
 
 3) run the desired generator: 
-a) user$ python dgen_person_ddb.py  [ generate person data to ddb ] - or -
-b) user$ python dgen_mach_ddb.py    [ generate machine data to ddb ]
+* a) user$ python dgen_person_ddb.py  [ generate person data to ddb ] - or -
+* b) user$ python dgen_mach_ddb.py    [ generate machine data to ddb ]
